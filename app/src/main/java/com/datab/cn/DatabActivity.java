@@ -1,21 +1,31 @@
 package com.datab.cn;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import sqlite.DbHelper;
 
 public class DatabActivity extends AppCompatActivity {
     private DbHelper helper = new DbHelper(this);
     private SQLiteDatabase db;
-    private TextView tv ;
+    private TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,22 +46,7 @@ public class DatabActivity extends AppCompatActivity {
             }
         });
         tv = (TextView)findViewById(R.id.textv);
-//        //打开数据库输出流
-//        SQLdm s = new SQLdm();
-//        SQLiteDatabase db =s.openDatabase(getApplicationContext());
-//
-//        TextView textv = (TextView) findViewById(R.id.textv);
-//        //查询数据库中testid=1的数据
-//        Cursor cursor = db.rawQuery("select * from testbiao where id=?", new String[]{"1"});
-//        String name = null;
-//        if(cursor.moveToFirst()){
-//            name = cursor.getString(cursor.getColumnIndex("name"));
-//        }
-//        //这是一个TextView，把得到的数据库中的name显示出来.
-//        textv.setText(name);
-//        cursor.close();
     }
-
     private void insertData(String s) {
         if (s != null){
             db = helper.getWritableDatabase();
