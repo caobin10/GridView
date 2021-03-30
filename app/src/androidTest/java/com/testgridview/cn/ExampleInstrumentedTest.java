@@ -1,4 +1,4 @@
-package com.datab.cn;
+package com.testgridview.cn;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

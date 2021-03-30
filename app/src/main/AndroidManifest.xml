@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.datab.cn">
+    package="com.testgridview.cn">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme2">
-        <activity android:name=".DatabActivity">
+        <activity android:name="com.testgridview.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
