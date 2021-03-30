@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private MyGridAdapter adapter;
     private List<Integer> imgList;
     private List<String> textList;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
